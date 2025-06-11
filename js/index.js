@@ -51,6 +51,12 @@ function del(i){
     list.splice(i,1);
     localStorage.setItem(PRODUCT_KEY, JSON.stringify(list));
     disp();
+
+    //to solve problem when the user deletes an item while currently in modify mode 
+    var delBtn = document.getElementById("del"+modItemIndex);
+    delBtn.disabled =false;
+    submitButton.textContent = 'Submit';
+    submitButton.onclick = addNew;
 }
 function mod(i){
     window.scrollTo(0, 0);
@@ -81,7 +87,7 @@ function update(){
         submitButton.onclick = addNew;
 
         var delBtn = document.getElementById("del"+modItemIndex);
-        delBtn.disabled =false; 
+        delBtn.disabled =false;
 
     } else{
         customAlert('Site Name or Url is not valid, Please follow the rules below :', `                    <p>
@@ -112,7 +118,7 @@ function formatUrl(urlInput){
         if (!/^https?:\/\//i.test(formattedUrl)) {
             formattedUrl = 'http://' + formattedUrl; 
         }
-    return formattedUrl
+    return formattedUrl;
 }
 
 function isValidName(str){
