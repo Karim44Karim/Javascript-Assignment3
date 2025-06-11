@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/litealert.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Bookmark</title>
+    </head>    
+    <body>
+        <h1>Bookmarker</h1>
+        <div>
+            <div class="form">
+                <div class="formTitle">
+                    <h2>
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+                </div>
+                <div class="form-body">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <label for="name">Site Name</label>
+                    <div class="input-field">
+                        <input id="nameInput" type="text" name="name" placeholder="Bookmark Name" oninput="checkNameInput()"  required>
+                        <i id="feedback-icon" class="fa-solid"></i>
+                    </div>
+                    <i class="fa-solid fa-link"></i>
+                    <label for="link">Site URL</label>
+                    <div class="input-field">
+                        <input id="urlInput" type="url" name="link" placeholder="Website URL" oninput="checkURLInput()" required>
+                        <i id="feedback-icon-1" class="fa-solid"></i>
+                    </div>
+                </div>
+                <button id="submitButton" type="submit" onclick="addNew()">Submit</button>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+                <th>Modify</th>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+        <script src="https://kit.fontawesome.com/a27af16f9b.js" crossorigin="anonymous"></script>
+        <script src="./js/litealert.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+
+</html>

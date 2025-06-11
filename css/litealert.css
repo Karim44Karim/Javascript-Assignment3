@@ -1,0 +1,127 @@
+#alertOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+#alertBox {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 500px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#alertBox h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+#alertBox h3{
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+#alertInput {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.message-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.message-header i{
+    cursor: pointer;
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}
+.message-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+.message-main h3{
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #352e28;
+}
+.message-body p{
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #212529;
+    padding-bottom: 20px;
+}
+.message-body i{
+    color: #bb4120;
+    -webkit-text-fill-color: #bb4120;
+}
+.alert-buttons {
+    margin-top: 1rem;
+}
+
+.alert-buttons button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.alert-confirm {
+    background-color: #007bff;
+    color: white;
+}
+
+.alert-cancel {
+    background-color: #ccc;
+    color: black;
+}
+
+/* Overlay fade-in */
+#alertOverlay.show {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Box scale-in animation */
+#alertBox {
+    transform: scale(0.8);
+    opacity: 0;
+    animation: scaleIn 0.3s ease forwards;
+}
+
+@keyframes scaleIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#alertIcon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}

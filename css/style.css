@@ -1,0 +1,264 @@
+/* font-family: "Pacifico", cursive;
+font-family: "Righteous", sans-serif;
+font-family: "PT Sans Caption", sans-serif; */
+
+
+
+/* *********************** global  *********************** */
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #212529;
+}
+.clear-fix{
+    clear: both;
+}
+img{ display: block;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a, span {
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+/* *********************** global  *********************** */
+body{
+    background-color: #F7ECDE;
+    padding-block: 55px;
+}
+h1{
+    color: #352e28;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 500;
+    font-family: "Pacifico", cursive;
+    width: fit-content;
+    margin-inline: auto;
+    position: relative;
+}
+h1::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #FEC260;
+    z-index: -1;
+    transition: height 0.5s;
+}
+h1:hover::after{
+    height: 65%;
+}
+h2{
+    display: inline-block;
+}
+.form{
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 65px;
+    padding: 20px;
+    border-block: 2px dotted black;
+}
+.form input{
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    border: none;
+    font-family: "PT Sans Caption", sans-serif;
+}
+.form input:focus{
+    border: none;
+    outline: none;
+}
+.form label{
+    padding-bottom: 10px;
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+}
+.formTitle{
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: "Righteous", sans-serif;
+    text-align: center;
+    background: linear-gradient(90deg,rgba(61, 165, 92, 1), rgba(179, 172, 73, 1));
+    background-clip: text;
+    color: transparent; 
+}
+.formTitle h2{
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.formTitle i{
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.form-body{
+    padding-top: 40px;
+}
+.input-field{
+    padding: 6px 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.input-label{
+    margin-left: 10px;
+}
+.input-field:has(input:focus){
+    border-color: #D99C39;
+    outline: 5px solid rgba(250, 222, 180,0.7);
+}
+.input-field:has(input.valid){
+    border: 1px solid green;
+}
+.input-field:has(input.valid:focus){
+    outline: 5px solid rgba(0, 180, 0, 0.3);
+}
+.input-field:has(input.valid) i{
+    color: green;
+    -webkit-text-fill-color: green;
+}
+.input-field:has(input.inValid){
+    border: 1px solid red;
+}
+.input-field:has(input.inValid) i{
+    color: red;
+    -webkit-text-fill-color: red;
+}
+.input-field:has(input.inValid:focus){
+    outline: 5px solid rgba(250, 0, 0, 0.3);
+}
+.form button{
+    display: block;
+    margin-inline: auto;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "PT Sans Caption", sans-serif;
+    color: white;
+    background-color: #D1512D;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 50px;
+    transition: background-color 0.4s;
+    cursor: pointer;
+    border: 0.5px solid transparent;
+}
+.form button:hover{
+    background-color: #BB4120;
+    border: 0.5px solid black;
+}
+table{
+    margin-top: 25px;
+    margin-inline: auto;
+    width: 90%;
+    background-color: white;
+    text-align: center;
+    font-family: "PT Sans Caption", sans-serif;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 7px 3px;
+    border-bottom: 1px solid #DEE2E6;
+    text-transform: capitalize;
+}
+.btn{
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    font-family: "PT Sans Caption", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+.btn i{
+    padding-right: 10px;
+    color: white;
+    -webkit-text-fill-color: white;
+}
+.btn span{
+    color: white;
+}
+.visit-btn{
+    background-color: #9EB23B;
+    border: 0.5px solid transparent;
+}
+.visit-btn:hover{
+    background-color: #8A9E23;
+    border: 0.5px solid black;
+}
+.delete-btn{
+    background-color: #EB1D36;
+    border: 0.5px solid transparent;
+}
+.delete-btn:hover{
+    background-color: #D30820;
+    border: 0.5px solid black;
+}
+.modify-btn{
+    background-color: #4460ff;
+    border: 0.5px solid transparent;
+}
+.modify-btn:hover{
+    background-color: #1a3bf8;
+    border: 0.5px solid black;
+}
+
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+    td>a>button>span, td>button>span {
+        display: none;
+    }
+    .btn i{
+        padding: 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+} 
